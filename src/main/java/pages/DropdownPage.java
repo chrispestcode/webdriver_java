@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class DropdownPage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
     private final By dropdown = By.id("dropdown");
 
     public DropdownPage(WebDriver driver){
@@ -24,7 +24,7 @@ public class DropdownPage {
 
     public List<String> getSelectedOptions() {
         List<WebElement> selectedElements = findDropdownElement().getAllSelectedOptions();
-        return selectedElements.stream().map(e -> e.getText()).collect(Collectors.toList());
+        return selectedElements.stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
     private Select findDropdownElement(){
