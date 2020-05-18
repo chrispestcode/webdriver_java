@@ -41,6 +41,11 @@ public class HomePage {
         return new FileUploadPage(driver);
     }
 
+    public FramePage clickFramePage() {
+        clickLink("WYSIWYG Editor");
+        return new FramePage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
