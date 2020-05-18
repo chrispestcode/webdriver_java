@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.SecureAreaPage;
@@ -27,6 +28,11 @@ public class BaseTests {
 
         homePage = new HomePage(driver);
         System.out.println(driver.getTitle());
+    }
+
+    @BeforeMethod
+    public void goHome(){
+        driver.get("https://the-internet.herokuapp.com/");
     }
 
     @AfterClass
