@@ -7,7 +7,7 @@ public class HomePage {
 
     private WebDriver driver;
 
-    public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -21,10 +21,16 @@ public class HomePage {
         return new DropdownPage(driver);
     }
 
-    public HoversPage clickHovers(){
+    public HoversPage clickHovers() {
         clickLink("Hovers");
         return new HoversPage(driver);
     }
+
+    public KeyPressesPage clickKeyPresses() {
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
+
 
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
