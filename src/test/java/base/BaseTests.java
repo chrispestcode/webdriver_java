@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.SecureAreaPage;
+import utils.WindowManager;
 
 import java.util.List;
 
@@ -42,5 +43,7 @@ public class BaseTests {
     }
 
 
-
+    public WindowManager getWindowManager() {
+        return new WindowManager(driver);
+    }
 }
