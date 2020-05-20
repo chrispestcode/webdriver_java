@@ -41,9 +41,14 @@ public class HomePage {
         return new FileUploadPage(driver);
     }
 
-    public FramePage clickFramePage() {
+    public FramePage clickFrame() {
         clickLink("WYSIWYG Editor");
         return new FramePage(driver);
+    }
+
+    public DynamicLoadingPage clickDynamicLoading() {
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
     }
 
     private void clickLink(String linkText){

@@ -12,7 +12,7 @@ public class FrameTests extends BaseTests {
         String text1 = "hello";
         String text2 = "world";
 
-        var framePage = homePage.clickFramePage();
+        var framePage = homePage.clickFrame();
         framePage.clearTextArea();
         framePage.setTextArea(text1);
         framePage.decreaseIndentation();

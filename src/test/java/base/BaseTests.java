@@ -25,6 +25,7 @@ public class BaseTests {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
+        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         homePage = new HomePage(driver);
         System.out.println(driver.getTitle());
