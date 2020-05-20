@@ -19,4 +19,9 @@ public class LoginTests extends BaseTests {
         assertTrue(secureAreaPage.getAlertText().contains("You logged into a secure area!"),
                 "Alert text is incorrect");
     }
+
+    @Test
+    public void testSelectOption(){
+        var dropdownPage = homePage.clickDropdownLink();
+    }
 }
